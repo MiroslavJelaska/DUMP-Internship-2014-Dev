@@ -1,0 +1,16 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>NoteShare | @ViewBag.Title</title>
+</head>
+    <body>
+        <h1>Note Share - @ViewBag.Title</h1>
+        
+        <ul>
+            <li>@Html.RouteLink("Home", "Home")</li>
+            <li>@Html.RouteLink("Create Note", "NotesCreate")</li>
+        </ul>
+
+        @RenderBody()
+    </body>
+</html>

@@ -1,0 +1,17 @@
+﻿@model IList<Dump.Internship.NoteShare.Models.Note>
+
+@{
+    ViewBag.Title = "Home";
+}
+
+<div>
+    @foreach (var note in Model)
+    {
+        <div>
+            <h3>@note.Title</h3>
+            <small>@note.CreatedOn.ToShortDateString()</small>
+            @Html.RouteLink("Read more...", "NotesDetails", new { id = note.Id } )
+        </div>
+        <hr/>
+    }
+</div>

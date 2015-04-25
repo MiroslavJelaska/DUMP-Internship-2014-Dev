@@ -1,0 +1,28 @@
+﻿@model Dump.Internship.NoteShare.Models.Note
+
+@{
+    ViewBag.Title = "Create Note";
+}
+
+<div>
+    
+    @using (Html.BeginForm())
+    {
+        @Html.LabelFor(m => m.Title, "Title: ")
+        @Html.EditorFor(m => m.Title)
+        @Html.ValidationMessageFor(m => m.Title)
+
+        <br/>
+        <br/>
+        
+        @Html.LabelFor(m => m.Text, "Text: ")
+        @Html.EditorFor(m => m.Text)
+        @Html.ValidationMessageFor(m => m.Text)
+        
+        <br/>
+        <br/>
+        
+        <button type="submit">Save</button>
+    }
+   
+</div>
